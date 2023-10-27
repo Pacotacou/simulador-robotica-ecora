@@ -71,4 +71,25 @@ $(document).ready(function() {
             });
         });
     }
+
+    $('#background-choice').change(function() {
+        var selectedBackground = $(this).val();
+        switch(selectedBackground) {
+            case 'background1':
+                $('.field').css('background-image', 'url("/fondo-carretera.jpg")');
+                break;
+            case 'background2':
+                $('.field').css('background-image', 'url("/fondo-2.png")');
+                break;
+            case 'background3':
+                $('.field').css('background-image', 'url("fondo-cuadricula.jpg")');
+                break;
+            default:
+                $('.field').css('background-image', ''); // Fondo por defecto o puedes poner otro
+                break;
+        }
+    });
+    
+
+    
 });
